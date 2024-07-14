@@ -1,0 +1,97 @@
+:root{
+    --bg-color: rgb(62, 1, 1);
+    --font-color: white;
+    --font-family: "Press Start 2P", system-ui;
+    --button-family: "Playfair Display", serif;
+    --container-bg: rgb(73, 31, 31);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: var(--bg-color); */
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+}
+.container{
+    padding: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--container-bg) ;
+    border-radius: 10px;
+}
+h1{
+    color:var(--font-color);
+    text-transform: capitalize;
+    font-size: 50px;
+    font-family: var(--font-family);
+}
+.reset{
+    background-color: aliceblue;
+    border: 0px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size:medium;
+    font-family: var(--button-family);
+    font-weight: bolder;
+    cursor: pointer;
+}
+.reset:hover{
+    background-color: var(--bg-color);
+    color: white;
+    padding: 12px;
+    transition: ease-in .2s;
+    border: 1px solid white;
+}
+.reset:focus{
+    background-color: var(--bg-color);
+    color: white;
+    padding: 12px;
+    border: 1px solid white;
+}
+.game{
+    width: 440px;
+    height: 440px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+.cardItem{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    background-color: aliceblue;
+    transform: rotateY(180deg);
+    transition: 0.2s ;
+}
+.cardItem.box-open{
+    transform: rotate(0deg);
+}
+.cardItem::after{
+    content: '';
+    position: absolute;
+    /* opacity: 0.5; */
+    inset: 0;
+    background: rgb(155, 94, 94);
+    transition: 0.25s;
+    transform: rotate(0deg);
+    backface-visibility: hidden;
+}
+.box-open::after, .Boxmatched::after{
+    transform: rotateY(180deg);
+}

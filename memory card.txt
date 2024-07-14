@@ -1,0 +1,28 @@
+MEMORY CARD GAME 
+
+Project Description:-The game is a classic memory-testing game where players need to match pairs of cards.
+
+Project Requirements:
+ a.Game Structure:
+	1. grid(e.g., 4x4 or 6x6).
+	2. Each card should have a hidden image on the back.
+	3. The goal is to find matching pairs of cards by clicking on them.
+ b. Game Rules:
+	1.When two cards are clicked:
+		● If they match, they should stay face up.
+		● If they don't match, they should flip back face down.
+	2.Keep track of the number of moves the player makes.
+	3.Implement a timer to track how long it takes to complete the game.
+ c.Game Features:
+	1."New Game" button that shuffles the cards for a new game.
+	2. the number of moves 
+	3. time taken during the game.
+	4."Congratulations" message
+	5.Ensure the game works on both "desktop" and "mobile" devices with responsive design.
+	6.Include a README file with instructions on how to play the game.
+
+//start
+Step1: store images in js as array object;
+Step2:Creating grid with these store images;
+Step3:CSS for these grids
+Step4: Fisher-yates Shuffles or shuffling the cards on each reset
